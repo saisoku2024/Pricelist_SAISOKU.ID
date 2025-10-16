@@ -1,0 +1,18 @@
+[
+{
+"id": 1,
+"service": "Netflix Premium",
+"tier": "Team 4K",
+"price": 59000,
+"duration": 1,
+"features": ["4K","4 device","Ad-free"]
+},
+{
+"id": 2,
+"service": "Viu Premium",
+"tier": "Business",
+"price": 50000,
+"duration": 1,
+"features": ["HD","Multi-device"]
+}
+]
