@@ -1,18 +1,75 @@
+// prices.json
 [
-{
-"id": 1,
-"service": "Netflix Premium",
-"tier": "Team 4K",
-"price": 59000,
-"duration": 1,
-"features": ["4K","4 device","Ad-free"]
-},
-{
-"id": 2,
-"service": "Viu Premium",
-"tier": "Business",
-"price": 50000,
-"duration": 1,
-"features": ["HD","Multi-device"]
-}
+  {
+    "id": 1,
+    "service": "Netflix Premium",
+    "tier": "Team 4K",
+    "price": 59000,
+    "duration": 1,
+    "features": ["4K","4 device","Ad-free"],
+    "shortDesc": "Streaming 4K untuk tim kecil"
+  },
+  {
+    "id": 2,
+    "service": "Viu Premium",
+    "tier": "Business",
+    "price": 50000,
+    "duration": 1,
+    "features": ["HD","Multi-device","Konten Asia"],
+    "shortDesc": "Konten Asia populer, multi-device"
+  },
+  {
+    "id": 3,
+    "service": "Prime Video",
+    "tier": "Corporate",
+    "price": 45000,
+    "duration": 1,
+    "features": ["HD","Multi-region","Cloud DVR"],
+    "shortDesc": "Library besar untuk kebutuhan korporat"
+  },
+  {
+    "id": 4,
+    "service": "YouTube Premium",
+    "tier": "Team",
+    "price": 35000,
+    "duration": 1,
+    "features": ["Ad-free","Background play","Offline"],
+    "shortDesc": "Tanpa iklan, ideal untuk presentasi & kantor"
+  },
+  {
+    "id": 5,
+    "service": "Disney+ Hotstar",
+    "tier": "Business",
+    "price": 48000,
+    "duration": 1,
+    "features": ["HD","Film & Serial Internasional"],
+    "shortDesc": "Katalog hiburan keluarga & konten internasional"
+  },
+  {
+    "id": 6,
+    "service": "HBO Max",
+    "tier": "Pro",
+    "price": 65000,
+    "duration": 1,
+    "features": ["HD","Originals","Movies"],
+    "shortDesc": "Konten premium & film box-office"
+  },
+  {
+    "id": 7,
+    "service": "Spotify Business",
+    "tier": "Corporate",
+    "price": 30000,
+    "duration": 1,
+    "features": ["Commercial use","High-quality audio"],
+    "shortDesc": "Musik lisensi untuk lingkungan bisnis"
+  },
+  {
+    "id": 8,
+    "service": "Canva Pro",
+    "tier": "Team",
+    "price": 120000,
+    "duration": 12,
+    "features": ["Brand kit","Team templates","Export 4K"],
+    "shortDesc": "Desain cepat & konsisten untuk tim marketing"
+  }
 ]
