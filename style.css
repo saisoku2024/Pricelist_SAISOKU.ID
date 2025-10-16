@@ -1,43 +1,59 @@
-/* style.css — professional, B2B look */
+/* style.css */
 :root{
---bg:#0b1220; --card:#0f1724; --muted:#9aa4b2; --accent:#0ea5a4; --glass: rgba(255,255,255,0.04);
---radius:12px; --container-w:1100px;
+  --bg:#071022;
+  --card:#0f1724;
+  --muted:#9aa4b2;
+  --accent:#06b6b4;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --container-w:1100px;
+  --text:#e7f0fa;
 }
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter, Poppins, system-ui, sans-serif;background:var(--bg);color:#e6eef6}
+html,body{height:100%;margin:0;font-family:Inter, Poppins, system-ui, sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:var(--container-w);margin:0 auto;padding:24px}
-
-
-.site-header{position:fixed;left:0;right:0;top:0;padding:12px 0;backdrop-filter:blur(6px);z-index:10}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+.site-header{position:fixed;left:0;right:0;top:0;padding:12px 0;backdrop-filter:blur(6px);z-index:10;background:linear-gradient(180deg, rgba(3,6,12,0.35), rgba(3,6,12,0.15))}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:700;font-size:18px}
 .brand .muted{font-weight:400;color:var(--muted);margin-left:8px}
-.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-.nav a:hover{color:white}
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+.nav a:hover{color:white;text-decoration:underline}
 
-
-.hero{min-height:340px;display:flex;align-items:center;position:relative;padding-top:72px}
-.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(3,7,18,0.6), rgba(3,7,18,0.8));}
-.hero{background-image: url('https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1600&q=60'), url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1600&q=60');background-size:cover;background-position:center;}
-.hero-inner{position:relative;z-index:2;padding:72px 0}
-.hero-title{font-size:32px;margin:0 0 8px}
+.hero{min-height:340px;display:flex;align-items:center;position:relative;padding-top:72px;border-bottom:1px solid rgba(255,255,255,0.02)}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,9,18,0.6), rgba(4,9,18,0.8));mix-blend-mode:multiply}
+.hero{background-image:
+  url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1600&q=60'),
+  url('https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1600&q=60');
+  background-size:cover;background-position:center;filter:saturate(0.9)}
+.hero-inner{position:relative;z-index:2;padding:72px 0;max-width:900px}
+.hero-title{font-size:32px;margin:0 0 8px;line-height:1.05}
 .hero-sub{color:var(--muted);margin:0 0 18px}
-.controls{display:flex;gap:12px}
-.controls input, .controls select{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit}
 
+.controls{display:flex;gap:12px;align-items:center}
+.controls input, .controls select{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;font-size:14px}
+.controls .btn{padding:9px 12px;border-radius:10px;font-weight:600;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer}
+.controls .btn:hover{color:white}
 
 .section{padding:36px 0}
-.section-title{font-size:20px;margin-bottom:18px}
-.prices-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.price-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:18px;box-shadow:0 4px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-.price-card h4{margin:0 0 6px}
-.price-tag{font-weight:700;font-size:20px}
+.section-title{font-size:20px;margin-bottom:8px}
+.small{max-width:760px}
+.muted{color:var(--muted)}
+.prices-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:18px}
+.price-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;justify-content:space-between}
+.price-card h4{margin:0 0 8px;font-size:16px}
+.price-card .muted{font-size:13px}
+.price-tag{font-weight:700;font-size:20px;margin-top:6px}
 .price-meta{color:var(--muted);font-size:13px;margin-top:8px}
-.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-.btn-primary{background:var(--accent);color:#062023}
+.features{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.feature-pill{background:var(--glass);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+.card-actions{margin-top:12px;display:flex;gap:8px;align-items:center}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;cursor:pointer}
+.btn-primary{background:var(--accent);color:#04201f;border:0}
 .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
 
+.site-footer{padding:18px 0;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
+.foot-small{font-size:12px;color:var(--muted)}
 
-.site-footer{padding:18px 0;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
-.small{max-width:720px}
-@media (max-width:600px){.controls{flex-direction:column}.hero-title{font-size:22px}}
+@media (max-width:900px){.container{padding:18px}.hero-inner{padding:44px 0}.hero-title{font-size:26px}.controls{flex-direction:column;align-items:stretch}.nav a{margin-left:12px}}
+@media (max-width:480px){.hero{min-height:260px}.price-card{padding:14px}}
