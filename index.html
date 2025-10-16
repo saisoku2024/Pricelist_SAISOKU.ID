@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Saisoku · Price List</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<div class="brand">Saisoku <span class="muted">Premium Apps</span></div>
+<nav class="nav">
+<a href="#prices">Pricing</a>
+<a href="#how-to">Cara Update</a>
+<a id="editOnGitBtn" target="_blank">Edit Prices</a>
+</nav>
+</div>
+</header>
+
+
+<main>
+<section class="hero">
+<div class="overlay"></div>
+<div class="container hero-inner">
+<h1 class="hero-title">Harga Paket Aplikasi Premium</h1>
+<p class="hero-sub">Desain profesional, mudah dikelola via GitHub. Pilih paket sesuai kebutuhan tim Anda.</p>
+<div class="controls">
+<input id="searchInput" type="search" placeholder="Cari (mis. Netflix, Viu, 4K)" />
+<select id="filterDuration"><option value="all">Semua Durasi</option><option value="1">1 Bulan</option><option value="6">6 Bulan</option><option value="12">12 Bulan</option></select>
+</div>
+</div>
+</section>
+
+
+<section id="prices" class="container section">
+<h2 class="section-title">Daftar Harga</h2>
+<div id="pricesGrid" class="prices-grid" aria-live="polite"></div>
+</section>
+
+
+<section id="how-to" class="container section small">
+<h3>Cara mudah update harga</h3>
+<ol>
+<li>Edit file <code>prices.json</code> di repo GitHub (menu "Edit" pada file) — simpan commit.
+</li>
+<li>GitHub Pages otomatis men-deploy ulang dalam hitungan detik (jika sudah diaktifkan).
+</li>
+<li>Alternatif: gunakan Google Sheets + action untuk sinkronisasi (opsional, panduan ada di README).
+</li>
+</ol>
+</section>
+
+
+</main>
+
+
+<footer class="site-footer container">
+<div>© Saisoku · Designed for B2B · Built with GitHub Pages</div>
+<div class="foot-small">Butuh integrasi (Google Sheets / CMS)? Tanya saya.</div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
