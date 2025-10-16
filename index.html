@@ -2,67 +2,70 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Saisoku · Price List</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saisoku · Price List</title>
+  <meta name="description" content="Daftar harga paket aplikasi premium — solusi B2B, mudah diperbarui via GitHub Pages." />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<div class="brand">Saisoku <span class="muted">Premium Apps</span></div>
-<nav class="nav">
-<a href="#prices">Pricing</a>
-<a href="#how-to">Cara Update</a>
-<a id="editOnGitBtn" target="_blank">Edit Prices</a>
-</nav>
-</div>
-</header>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Saisoku Premium Apps">Saisoku <span class="muted">Premium Apps</span></div>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#prices">Pricing</a>
+        <a href="#how-to">Cara Update</a>
+        <a id="editOnGitBtn" target="_blank" rel="noopener" aria-label="Edit prices on GitHub">Edit Prices</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <h1 id="hero-title" class="hero-title">Harga Paket Aplikasi Premium — Untuk Bisnis</h1>
+        <p class="hero-sub">Paket teruji untuk tim dan korporat. Mudah dikelola lewat GitHub — update instan.</p>
 
-<main>
-<section class="hero">
-<div class="overlay"></div>
-<div class="container hero-inner">
-<h1 class="hero-title">Harga Paket Aplikasi Premium</h1>
-<p class="hero-sub">Desain profesional, mudah dikelola via GitHub. Pilih paket sesuai kebutuhan tim Anda.</p>
-<div class="controls">
-<input id="searchInput" type="search" placeholder="Cari (mis. Netflix, Viu, 4K)" />
-<select id="filterDuration"><option value="all">Semua Durasi</option><option value="1">1 Bulan</option><option value="6">6 Bulan</option><option value="12">12 Bulan</option></select>
-</div>
-</div>
-</section>
+        <form class="controls" onsubmit="return false;" role="search" aria-label="Filter harga">
+          <label for="searchInput" class="visually-hidden">Cari layanan</label>
+          <input id="searchInput" type="search" placeholder="Cari (mis. Netflix, Viu, 4K)" aria-label="Cari layanan" />
+          <label for="filterDuration" class="visually-hidden">Filter durasi</label>
+          <select id="filterDuration" aria-label="Filter durasi">
+            <option value="all">Semua Durasi</option>
+            <option value="1">1 Bulan</option>
+            <option value="6">6 Bulan</option>
+            <option value="12">12 Bulan</option>
+          </select>
+          <button id="refreshBtn" class="btn btn-ghost" type="button" aria-label="Refresh daftar harga">Refresh</button>
+        </form>
+      </div>
+    </section>
 
+    <section id="prices" class="container section" aria-labelledby="prices-title">
+      <h2 id="prices-title" class="section-title">Daftar Harga</h2>
+      <p class="small muted">Klik "Hubungi Sales" untuk proses pemesanan atau konsultasi paket.</p>
+      <div id="pricesGrid" class="prices-grid" aria-live="polite"></div>
+      <noscript class="muted">JavaScript diperlukan untuk memuat daftar harga. Aktifkan JavaScript atau buka prices.json secara manual.</noscript>
+    </section>
 
-<section id="prices" class="container section">
-<h2 class="section-title">Daftar Harga</h2>
-<div id="pricesGrid" class="prices-grid" aria-live="polite"></div>
-</section>
+    <section id="how-to" class="container section small" aria-labelledby="howto-title">
+      <h3 id="howto-title">Cara mudah update harga</h3>
+      <ol>
+        <li>Edit file <code>prices.json</code> langsung di repo GitHub (menu "Edit" pada file) lalu commit.</li>
+        <li>Jika GitHub Pages aktif, halaman akan memuat data terbaru saat di-refresh.</li>
+        <li>Alternatif: sinkronisasi dari Google Sheets via GitHub Actions (opsional, lihat README).</li>
+      </ol>
+    </section>
 
+  </main>
 
-<section id="how-to" class="container section small">
-<h3>Cara mudah update harga</h3>
-<ol>
-<li>Edit file <code>prices.json</code> di repo GitHub (menu "Edit" pada file) — simpan commit.
-</li>
-<li>GitHub Pages otomatis men-deploy ulang dalam hitungan detik (jika sudah diaktifkan).
-</li>
-<li>Alternatif: gunakan Google Sheets + action untuk sinkronisasi (opsional, panduan ada di README).
-</li>
-</ol>
-</section>
+  <footer class="site-footer container" role="contentinfo">
+    <div>© Saisoku · Designed for B2B · Built with GitHub Pages</div>
+    <div class="foot-small muted">Butuh integrasi (Google Sheets / CMS)? Lihat README atau hubungi developer.</div>
+  </footer>
 
-
-</main>
-
-
-<footer class="site-footer container">
-<div>© Saisoku · Designed for B2B · Built with GitHub Pages</div>
-<div class="foot-small">Butuh integrasi (Google Sheets / CMS)? Tanya saya.</div>
-</footer>
-
-
-<script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
